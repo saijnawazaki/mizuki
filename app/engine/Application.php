@@ -55,11 +55,11 @@ class Application
                     $this->url_controller->index();
                 }
                 else {
-                    header('location: ' . URL . 'error');
+                    header('location: ' . URL . 'error?note=404 Not Found');
                 }
             }
         } else {
-            header('location: ' . URL . 'error');
+            header('location: ' . URL . 'error?note=404 Not Found');
         }
     }
 
