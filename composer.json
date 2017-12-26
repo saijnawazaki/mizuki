@@ -1,0 +1,24 @@
+{
+    "name": "saijnawazaki/mizuki",
+    "description": "Mizuki - Simple MVC PHP application",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julianto Chai",
+            "email": "saijnawazaki@gmail.com"
+        }
+
+    ],
+    "minimum-stability": "dev",
+    "require": {
+		"owasp/csrf-protector-php": "dev-master"
+	},
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Miz\\" : "app/"
+        }
+    }
+}
