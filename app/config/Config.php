@@ -59,3 +59,24 @@ define('DB_NAME', 'databasename');
 define('DB_USER', 'root');
 define('DB_PASS', 'secret');
 define('DB_CHARSET', 'utf8');
+
+define('CSRFP_TOKEN_NAME', 'mizuki_nano');
+/*
+0 Send 403, Forbidden Header
+1 Strip the POST/GET query and forward the request! unset($_POST)
+2 Redirect to custom error page mentioned in errorRedirectionPage
+3 Show custom error message to user, mentioned in customErrorMessage
+4 Send 500, Internal Server Error header
+*/
+define('CSRFP_FAILEDAUTHACTION_GET', '2');
+define('CSRFP_FAILEDAUTHACTION_POST', '2');
+define('CSRFP_CUSTOMERRORMESSAGE', '');
+define('CSRFP_ERRORREDIRECTIONPAGE', URL . 'error?note=403 Access Forbidden by CSRFProtector');
+define('CSRFP_JSURL', URL . 'assets/vendor/owasp/csrf-protector-php/js/csrfprotector.js');
+define('CSRFP_TOKENLENGTH', '64');
+define('CSRFP_COOKIECONFIG_PATH', '');
+define('CSRFP_COOKIECONFIG_DOMAIN', '');
+define('CSRFP_COOKIECONFIG_SECURE', false);
+define('CSRFP_DISABLEDJAVASCRIPTMESSAGE', 'This site attempts to protect users against <a href=\"https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29\">
+Cross-Site Request Forgeries </a> attacks. In order to do so, you must have JavaScript enabled in your web browser otherwise this site will fail to work correctly for you.
+ See details of your web browser for how to enable JavaScript.');

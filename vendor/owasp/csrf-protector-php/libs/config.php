@@ -8,22 +8,20 @@
  * ---- tokenLength
  */
 return array(
-	"CSRFP_TOKEN" => "mizuki_nano",
-	"logDirectory" => "../log",
+	"CSRFP_TOKEN" => CSRFP_TOKEN_NAME,
+	"logDirectory" => '../log',
 	"failedAuthAction" => array(
-		"GET" => 2,
-		"POST" => 2),
-	"errorRedirectionPage" => URL . "error?note=403 Access Forbidden by CSRFProtector",
-	"customErrorMessage" => "",
-	"jsUrl" => URL . "assets/vendor/owasp/csrf-protector-php/js/csrfprotector.js",
-	"tokenLength" => 64,
+		"GET" => CSRFP_FAILEDAUTHACTION_GET,
+		"POST" => CSRFP_FAILEDAUTHACTION_POST),
+	"errorRedirectionPage" => CSRFP_ERRORREDIRECTIONPAGE,
+	"customErrorMessage" => CSRFP_CUSTOMERRORMESSAGE,
+	"jsUrl" => CSRFP_JSURL,
+	"tokenLength" => CSRFP_TOKENLENGTH,
 	"cookieConfig" => array(
-		"path" => '',
-		"domain" => '',
-		"secure" => false
+		"path" => CSRFP_COOKIECONFIG_PATH,
+		"domain" => CSRFP_COOKIECONFIG_DOMAIN,
+		"secure" => CSRFP_COOKIECONFIG_SECURE
 	),
-	"disabledJavascriptMessage" => "This site attempts to protect users against <a href=\"https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29\">
-	Cross-Site Request Forgeries </a> attacks. In order to do so, you must have JavaScript enabled in your web browser otherwise this site will fail to work correctly for you.
-	 See details of your web browser for how to enable JavaScript.",
+	"disabledJavascriptMessage" => CSRFP_DISABLEDJAVASCRIPTMESSAGE,
 	 "verifyGetFor" => array()
 );

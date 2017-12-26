@@ -67,7 +67,7 @@
 
                 <div class="links">
                     <a href="https://github.com/saijnawazaki/mizuki">GitHub</a>
-                    <form method="post"><input type="submit"></form>
+                    
                 </div>
             </div>
         </div>
